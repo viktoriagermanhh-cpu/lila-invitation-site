@@ -17,7 +17,7 @@
         <p class="subtitle">
           Пространство, куда приходят, чтобы понять себя, решить свой запрос и увидеть следующий шаг
         </p>
-        <a class="cta-button" href="#signup">Записаться на игру</a>
+        <a class="cta-button" href="#signup-form">Записаться на игру</a>
       </div>
     </header>
 
@@ -125,14 +125,114 @@
           </div>
         </div>
       </section>
+
+      <section class="section signup-section" id="signup-form">
+        <div class="container">
+          <h2>Запись на игру</h2>
+          <form
+            class="signup-form"
+            id="lila-signup-form"
+            action="#"
+            method="post"
+            novalidate
+          >
+            <div class="form-body" id="signup-form-body">
+              <div class="field">
+                <label for="signup-name">Имя</label>
+                <input
+                  type="text"
+                  id="signup-name"
+                  name="name"
+                  required
+                  autocomplete="given-name"
+                />
+              </div>
+              <div class="field">
+                <label for="signup-phone">Телефон / WhatsApp</label>
+                <input
+                  type="tel"
+                  id="signup-phone"
+                  name="phone"
+                  required
+                  autocomplete="tel"
+                  inputmode="tel"
+                />
+              </div>
+              <div class="field field-checkbox">
+                <input
+                  type="checkbox"
+                  id="signup-consent"
+                  name="consent"
+                  value="yes"
+                  required
+                />
+                <label for="signup-consent"
+                  >Согласие на обработку персональных данных</label
+                >
+              </div>
+              <button type="submit" class="submit-button">
+                Хочу на Лилу
+              </button>
+            </div>
+            <div
+              class="form-success"
+              id="signup-form-success"
+              hidden
+              tabindex="-1"
+              role="status"
+              aria-live="polite"
+            >
+              <p>Спасибо. Ваша заявка отправлена. Я свяжусь с вами.</p>
+            </div>
+          </form>
+          <div class="signup-alt">
+            <a
+              class="whatsapp-link"
+              href="#"
+              id="whatsapp-placeholder"
+              >Написать в WhatsApp</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
 
-    <section class="section cta-final" id="signup">
+    <section class="section cta-final">
       <div class="container">
-        <h2>Готовы посмотреть на свой запрос яснее?</h2>
+        <h2>Готовы получить ответ по своему запросу?</h2>
         <p>Запишитесь на игру Лила в удобном для вас формате.</p>
-        <a class="cta-button" href="#signup">Записаться на игру</a>
+        <a class="cta-button" href="#signup-form">Записаться на игру</a>
       </div>
     </section>
+    <script>
+      (function () {
+        var form = document.getElementById("lila-signup-form");
+        var body = document.getElementById("signup-form-body");
+        var success = document.getElementById("signup-form-success");
+        var wa = document.getElementById("whatsapp-placeholder");
+
+        if (form && body && success) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (!form.checkValidity()) {
+              form.reportValidity();
+              return;
+            }
+            body.hidden = true;
+            success.hidden = false;
+            success.focus();
+            form.setAttribute("data-submitted", "true");
+          });
+        }
+
+        if (wa) {
+          wa.addEventListener("click", function (e) {
+            if (wa.getAttribute("href") === "#") {
+              e.preventDefault();
+            }
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
