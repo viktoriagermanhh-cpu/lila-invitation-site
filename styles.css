@@ -1,0 +1,154 @@
+:root {
+  --bg: #f7f8f6;
+  --surface: #ffffff;
+  --text: #1f2a2e;
+  --muted: #4d5b60;
+  --border: #d8e0dd;
+  --accent: #3d6b68;
+  --accent-hover: #355d5a;
+  --radius: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.55;
+}
+
+.container {
+  width: min(100% - 2rem, 900px);
+  margin-inline: auto;
+}
+
+.hero {
+  padding: 5rem 0 4rem;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.9rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+}
+
+h2 {
+  font-size: clamp(1.45rem, 4vw, 2rem);
+}
+
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+.subtitle {
+  max-width: 680px;
+  margin: 0 auto 1.4rem;
+  color: var(--muted);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.3rem;
+  border-radius: 999px;
+  background-color: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+  background-color: var(--accent-hover);
+}
+
+.section {
+  padding: 2.6rem 0;
+}
+
+.section .container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+}
+
+ul,
+ol {
+  padding-left: 1.15rem;
+  margin-top: 0.5rem;
+}
+
+li + li {
+  margin-top: 0.45rem;
+}
+
+.placeholders li strong {
+  color: var(--text);
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  background: #fcfdfc;
+}
+
+.faq-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.cta-final {
+  padding-top: 2.2rem;
+  padding-bottom: 4rem;
+}
+
+.cta-final .container {
+  text-align: center;
+}
+
+.cta-final p {
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 3.3rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .section {
+    padding: 1.5rem 0;
+  }
+
+  .section .container {
+    padding: 1.1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
