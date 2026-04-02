@@ -137,20 +137,20 @@
               <input
                 type="radio"
                 name="format-choice"
-                value="individual"
+                value="group"
                 checked
               />
-              <span class="format-option-text">Индивидуально</span>
+              <span class="format-option-text">В группе</span>
             </label>
             <label class="format-option">
-              <input type="radio" name="format-choice" value="group" />
-              <span class="format-option-text">В группе</span>
+              <input type="radio" name="format-choice" value="individual" />
+              <span class="format-option-text">Индивидуально</span>
             </label>
           </div>
           <div class="format-price-block" aria-live="polite">
-            <p class="format-price-value" id="format-price-value">от 200 €</p>
+            <p class="format-price-value" id="format-price-value">70 €</p>
             <p class="format-price-note" id="format-price-note">
-              Индивидуальный формат. Стоимость зависит от длительности.
+              Групповой формат. До 6 участниц.
             </p>
           </div>
         </div>
@@ -214,7 +214,7 @@
                 type="hidden"
                 name="participation_format"
                 id="signup-participation-format"
-                value="individual"
+                value="group"
               />
               <div class="field">
                 <label for="signup-name">Имя</label>
@@ -290,7 +290,7 @@
       (function () {
         var FORMAT_INFO = {
           individual: {
-            price: "от 200 €",
+            price: "от 200€ и выше",
             note: "Индивидуальный формат. Стоимость зависит от длительности.",
           },
           group: {
