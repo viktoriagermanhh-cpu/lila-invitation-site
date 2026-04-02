@@ -91,6 +91,47 @@ ol {
   margin-top: 0.85rem;
 }
 
+.host-layout {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.host-text {
+  width: 100%;
+  min-width: 0;
+}
+
+.host-photo {
+  flex-shrink: 0;
+}
+
+.host-photo img {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@media (min-width: 641px) {
+  .host-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.75rem;
+  }
+
+  .host-text {
+    flex: 1;
+  }
+
+  .host-photo img {
+    max-width: 240px;
+  }
+}
+
 .format-intro {
   color: var(--muted);
   margin-bottom: 1.1rem;
