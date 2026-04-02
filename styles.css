@@ -87,6 +87,10 @@ ol {
   padding: 1.6rem;
 }
 
+.emotional-block p + p {
+  margin-top: 0.85rem;
+}
+
 ul,
 ol {
   padding-left: 1.15rem;
