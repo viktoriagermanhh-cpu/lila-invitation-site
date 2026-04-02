@@ -121,16 +121,38 @@
         </div>
       </section>
 
-      <section class="section" id="format">
+      <section class="section format-section" id="format">
         <div class="container">
-          <h2>Формат участия</h2>
-          <ul class="placeholders">
-            <li><strong>Формат:</strong> [индивидуально / группа]</li>
-            <li><strong>Длительность:</strong> [уточняется]</li>
-            <li><strong>Онлайн/офлайн:</strong> [уточняется]</li>
-            <li><strong>Язык:</strong> [уточняется]</li>
-            <li><strong>Стоимость:</strong> [уточняется]</li>
-          </ul>
+          <h2 id="format-heading">Формат участия</h2>
+          <p class="format-intro">
+            Ты можешь выбрать тот формат участия, который подходит тебе сейчас
+            больше.
+          </p>
+          <div
+            class="format-options"
+            role="radiogroup"
+            aria-labelledby="format-heading"
+          >
+            <label class="format-option">
+              <input
+                type="radio"
+                name="format-choice"
+                value="individual"
+                checked
+              />
+              <span class="format-option-text">Индивидуально</span>
+            </label>
+            <label class="format-option">
+              <input type="radio" name="format-choice" value="group" />
+              <span class="format-option-text">В группе</span>
+            </label>
+          </div>
+          <div class="format-price-block" aria-live="polite">
+            <p class="format-price-value" id="format-price-value">от 200 €</p>
+            <p class="format-price-note" id="format-price-note">
+              Индивидуальный формат. Стоимость зависит от длительности.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -188,6 +210,12 @@
             novalidate
           >
             <div class="form-body" id="signup-form-body">
+              <input
+                type="hidden"
+                name="participation_format"
+                id="signup-participation-format"
+                value="individual"
+              />
               <div class="field">
                 <label for="signup-name">Имя</label>
                 <input
@@ -260,10 +288,45 @@
     </section>
     <script>
       (function () {
+        var FORMAT_INFO = {
+          individual: {
+            price: "от 200 €",
+            note: "Индивидуальный формат. Стоимость зависит от длительности.",
+          },
+          group: {
+            price: "70 €",
+            note: "Групповой формат. До 6 участниц.",
+          },
+        };
+
         var form = document.getElementById("lila-signup-form");
         var body = document.getElementById("signup-form-body");
         var success = document.getElementById("signup-form-success");
         var wa = document.getElementById("whatsapp-placeholder");
+        var formatHidden = document.getElementById("signup-participation-format");
+        var formatRadios = document.querySelectorAll('input[name="format-choice"]');
+        var formatPriceEl = document.getElementById("format-price-value");
+        var formatNoteEl = document.getElementById("format-price-note");
+
+        function syncFormatChoice() {
+          var selected = document.querySelector(
+            'input[name="format-choice"]:checked'
+          );
+          if (!selected || !formatPriceEl || !formatNoteEl) return;
+          var key = selected.value;
+          var data = FORMAT_INFO[key];
+          if (!data) return;
+          formatPriceEl.textContent = data.price;
+          formatNoteEl.textContent = data.note;
+          if (formatHidden) formatHidden.value = key;
+        }
+
+        if (formatRadios.length && formatPriceEl && formatNoteEl) {
+          formatRadios.forEach(function (radio) {
+            radio.addEventListener("change", syncFormatChoice);
+          });
+          syncFormatChoice();
+        }
 
         if (form && body && success) {
           form.addEventListener("submit", function (e) {
