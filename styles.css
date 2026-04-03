@@ -139,25 +139,35 @@ ol {
 .reviews-inner {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
+  grid-template-areas: "video copy";
   column-gap: 48px;
+  row-gap: 0;
   align-items: start;
 }
 
+.reviews-video-placeholder {
+  grid-area: video;
+  width: 240px;
+  max-width: 100%;
+  margin: 0;
+  justify-self: start;
+  align-self: start;
+}
+
 .reviews-copy {
+  grid-area: copy;
   min-width: 0;
+  align-self: start;
+}
+
+.reviews-copy h2 {
+  margin: 0 0 16px 0;
 }
 
 .reviews-lead {
   color: var(--muted);
-  margin-bottom: 0;
-  max-width: 36rem;
-}
-
-.reviews-video-placeholder {
-  width: 240px;
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
+  max-width: 560px;
 }
 
 .reviews-video-placeholder video {
@@ -171,19 +181,21 @@ ol {
 @media (max-width: 640px) {
   .reviews-inner {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "video";
+    row-gap: 16px;
   }
 
   .reviews-copy {
-    grid-column: 1;
-    grid-row: 1;
+    grid-area: copy;
   }
 
   .reviews-video-placeholder {
-    grid-column: 1;
-    grid-row: 2;
+    grid-area: video;
     width: 100%;
     max-width: 220px;
-    margin-top: 16px;
+    margin: 0;
   }
 }
 
