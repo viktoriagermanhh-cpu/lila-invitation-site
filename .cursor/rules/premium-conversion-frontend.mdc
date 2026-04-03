@@ -1,0 +1,243 @@
+---
+description: Premium, trustworthy, conversion-focused frontend rule for service, coaching, psychology, event, and landing-page projects. Prioritize business goal, trust, clarity, mobile UX, and conversion. Do not change extra sections or rewrite user text without permission.
+alwaysApply: true
+---
+
+# Premium Conversion Frontend Rule
+
+Use this rule for all frontend and UX work in this project.
+
+## Core principle
+
+Business goal comes first. Beauty supports the goal.
+
+Do not design for visual effect alone. Design so the user:
+- quickly understands the offer
+- feels trust
+- feels calm and safe
+- clearly sees the value
+- wants to take the next step
+- wants to leave a request, book, join, or pay
+
+## Priority order
+
+Always follow this order:
+1. Business goal
+2. Trust
+3. Clarity
+4. Conversion
+5. Visual refinement
+6. Decorative expression
+
+If a design choice looks impressive but weakens clarity, trust, readability, or action-taking, reject it.
+
+## Desired visual tone
+
+Aim for a premium, mature, elegant, controlled visual style.
+
+Preferred qualities:
+- expensive-looking, not flashy
+- calm, not noisy
+- refined, not childish
+- warm, but not sentimental overload
+- modern, but not trendy for the sake of trend
+- beautiful, but disciplined
+- distinctive, but not chaotic
+
+The interface should feel:
+- high-level
+- trustworthy
+- clear
+- emotionally safe
+- worth paying for
+
+## Commercial UX standards
+
+Every design and code decision should improve one or more of these:
+- clarity of the offer
+- trust
+- ease of decision-making
+- visibility of the next step
+- emotional readiness to act
+- reduction of friction
+
+Pay special attention to:
+- offer hierarchy
+- CTA visibility
+- pricing clarity
+- testimonial readability
+- FAQ clarity
+- section pacing
+- cognitive load
+- clean transitions between sections
+- booking or signup flow
+
+Do not overload the page with equal visual intensity. Guide the eye.
+
+## Scope discipline
+
+Do not change more than requested.
+
+If the user asks to improve one block:
+- change only that block
+- adjust only directly dependent styles if necessary
+- do not redesign unrelated sections
+- do not rewrite the whole page
+- do not introduce broad new patterns unless explicitly asked
+
+Respect the current project structure and existing logic.
+
+## Text protection
+
+Do not rewrite, shorten, expand, reinterpret, or "improve" the user's text unless explicitly asked.
+
+You may:
+- improve spacing
+- improve grouping
+- improve emphasis
+- improve hierarchy
+- improve readability around the text
+
+But do not silently change copy.
+
+If text changes are necessary for usability, say so explicitly before applying them.
+
+## Structure protection
+
+Do not break the current page structure unless explicitly asked.
+
+Preserve:
+- section order
+- page logic
+- existing user flow
+- content architecture
+
+You may improve:
+- spacing
+- alignment
+- grouping
+- readability
+- interaction quality
+- CTA visibility
+- visual consistency
+
+## Mobile responsibility
+
+Always account for mobile, tablet, and desktop.
+
+Check before finishing:
+- text wrapping
+- headline breaks
+- button size
+- spacing rhythm
+- card stacking
+- image cropping
+- CTA visibility
+- testimonial readability
+- pricing clarity
+- no overlap
+- no cramped layout
+- no hidden content caused by responsiveness
+
+Never create a desktop-beautiful but mobile-broken result.
+
+## Trust signals
+
+When relevant, strengthen trust through interface and structure, not only words.
+
+Use when appropriate:
+- calm section pacing
+- cleaner offer presentation
+- visible testimonials
+- clear presenter identity
+- clear pricing logic
+- FAQ placement
+- reassuring microcopy
+- clear next-step explanation
+- reduced ambiguity
+- fewer overloaded choices
+
+## Motion and effects
+
+Use motion with restraint.
+
+Motion should support:
+- polish
+- hierarchy
+- feedback
+- smoothness
+
+Avoid:
+- flashy animation for its own sake
+- distracting hover drama
+- excessive movement near CTA or long reading sections
+- visual gimmicks that reduce trust
+
+Premium motion is subtle and controlled.
+
+## Typography and color
+
+Typography must feel elegant, readable, and appropriate for a trust-based premium service site.
+
+Avoid typography that feels:
+- generic and dull
+- childish
+- cheap
+- eccentric without purpose
+
+Use color strategically to support:
+- trust
+- clarity
+- premium feel
+- atmosphere
+- CTA emphasis
+
+Avoid palettes that feel:
+- cheap
+- harsh without purpose
+- noisy
+- disconnected from the offer
+
+## Accessibility and quality
+
+Do not sacrifice usability for style.
+
+Maintain:
+- readable contrast
+- semantic structure
+- visible focus states where relevant
+- readable font sizes
+- touch-friendly targets on mobile
+- robust layout behavior
+
+## Workflow before editing
+
+Before making changes, silently determine:
+1. What is the business goal of this block or page?
+2. What action should the user take?
+3. What reduces trust here?
+4. What reduces clarity here?
+5. What reduces conversion here?
+6. What is the smallest high-quality change that improves the result?
+
+## If writing a task for Cursor or another agent
+
+Write tasks so they are:
+- concrete
+- narrow enough to avoid drift
+- explicit about what to change
+- explicit about what not to change
+- clear about success criteria
+
+## Definition of done
+
+The work is done only if:
+- it looks premium
+- it feels trustworthy
+- it is easy to understand
+- it preserves the requested scope
+- it does not rewrite text without permission
+- it does not break the current structure
+- it works on mobile
+- it improves the likelihood of inquiry, booking, signup, or payment
+- it remains visually polished and commercially useful
