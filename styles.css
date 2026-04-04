@@ -29,8 +29,60 @@ body {
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   padding: 5rem 0 4rem;
   text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("Leela Spielfeld.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.16;
+  filter: blur(8px) saturate(0.72) brightness(1.08);
+  transform: scale(1.08);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 248, 246, 0.8) 0%,
+    rgba(247, 248, 246, 0.9) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 640px) {
+  .hero::before {
+    opacity: 0.1;
+    filter: blur(10px) saturate(0.68) brightness(1.1);
+    transform: scale(1.1);
+  }
+
+  .hero::after {
+    background: linear-gradient(
+      180deg,
+      rgba(247, 248, 246, 0.86) 0%,
+      rgba(247, 248, 246, 0.94) 100%
+    );
+  }
 }
 
 h1,
